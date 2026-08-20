@@ -1,0 +1,10 @@
+# Verified with conda env "torch-huyq" (Python 3.9).
+# torch is listed without the local CUDA build tag; install the wheel matching your
+# hardware, e.g. pip install torch==2.2.2 --index-url https://download.pytorch.org/whl/cu121
+torch==2.2.2
+numpy==1.26.2
+pandas==2.3.3
+scikit-learn==1.0.2
+tqdm==4.66.0
+scipy==1.13.1
+torchmetrics==0.11.4

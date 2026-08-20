@@ -1,0 +1,419 @@
+以下是json格式的数据
+[
+    {
+        "user_id": 1,
+        "log_num": 25,
+        "logs": [
+            {
+                "exer_id": 634,
+                "score": 1,
+                "knowledge_code": [
+                    634
+                ]
+            },
+            {
+                "exer_id": 488,
+                "score": 1,
+                "knowledge_code": [
+                    488
+                ]
+            },
+            {
+                "exer_id": 32,
+                "score": 1,
+                "knowledge_code": [
+                    32
+                ]
+            },
+            {
+                "exer_id": 728,
+                "score": 1,
+                "knowledge_code": [
+                    728
+                ]
+            },
+            {
+                "exer_id": 33,
+                "score": 1,
+                "knowledge_code": [
+                    33
+                ]
+            },
+            {
+                "exer_id": 750,
+                "score": 1,
+                "knowledge_code": [
+                    750
+                ]
+            },
+            {
+                "exer_id": 749,
+                "score": 0,
+                "knowledge_code": [
+                    749
+                ]
+            },
+            {
+                "exer_id": 729,
+                "score": 1,
+                "knowledge_code": [
+                    729
+                ]
+            },
+            {
+                "exer_id": 90,
+                "score": 1,
+                "knowledge_code": [
+                    90
+                ]
+            },
+            {
+                "exer_id": 730,
+                "score": 1,
+                "knowledge_code": [
+                    730
+                ]
+            },
+            {
+                "exer_id": 443,
+                "score": 1,
+                "knowledge_code": [
+                    443
+                ]
+            },
+            {
+                "exer_id": 444,
+                "score": 1,
+                "knowledge_code": [
+                    444
+                ]
+            },
+            {
+                "exer_id": 731,
+                "score": 1,
+                "knowledge_code": [
+                    731
+                ]
+            },
+            {
+                "exer_id": 236,
+                "score": 1,
+                "knowledge_code": [
+                    236
+                ]
+            },
+            {
+                "exer_id": 493,
+                "score": 0,
+                "knowledge_code": [
+                    493
+                ]
+            },
+            {
+                "exer_id": 757,
+                "score": 1,
+                "knowledge_code": [
+                    757
+                ]
+            },
+            {
+                "exer_id": 751,
+                "score": 0,
+                "knowledge_code": [
+                    751
+                ]
+            },
+            {
+                "exer_id": 507,
+                "score": 1,
+                "knowledge_code": [
+                    507
+                ]
+            },
+            {
+                "exer_id": 182,
+                "score": 1,
+                "knowledge_code": [
+                    182
+                ]
+            },
+            {
+                "exer_id": 178,
+                "score": 1,
+                "knowledge_code": [
+                    178
+                ]
+            },
+            {
+                "exer_id": 237,
+                "score": 1,
+                "knowledge_code": [
+                    237
+                ]
+            },
+            {
+                "exer_id": 445,
+                "score": 1,
+                "knowledge_code": [
+                    445
+                ]
+            },
+            {
+                "exer_id": 238,
+                "score": 1,
+                "knowledge_code": [
+                    238
+                ]
+            },
+            {
+                "exer_id": 761,
+                "score": 1,
+                "knowledge_code": [
+                    761
+                ]
+            },
+            {
+                "exer_id": 762,
+                "score": 0,
+                "knowledge_code": [
+                    762
+                ]
+            }
+        ]
+    },
+    {
+        "user_id": 2,
+        "log_num": 22,
+        "logs": [
+            {
+                "exer_id": 183,
+                "score": 0,
+                "knowledge_code": [
+                    183
+                ]
+            },
+            {
+                "exer_id": 488,
+                "score": 1,
+                "knowledge_code": [
+                    488
+                ]
+            },
+            {
+                "exer_id": 786,
+                "score": 1,
+                "knowledge_code": [
+                    786
+                ]
+            },
+            {
+                "exer_id": 32,
+                "score": 1,
+                "knowledge_code": [
+                    32
+                ]
+            },
+            {
+                "exer_id": 750,
+                "score": 1,
+                "knowledge_code": [
+                    750
+                ]
+            },
+            {
+                "exer_id": 728,
+                "score": 0,
+                "knowledge_code": [
+                    728
+                ]
+            },
+            {
+                "exer_id": 729,
+                "score": 1,
+                "knowledge_code": [
+                    729
+                ]
+            },
+            {
+                "exer_id": 26,
+                "score": 1,
+                "knowledge_code": [
+                    26
+                ]
+            },
+            {
+                "exer_id": 730,
+                "score": 1,
+                "knowledge_code": [
+                    730
+                ]
+            },
+            {
+                "exer_id": 749,
+                "score": 1,
+                "knowledge_code": [
+                    749
+                ]
+            },
+            {
+                "exer_id": 757,
+                "score": 0,
+                "knowledge_code": [
+                    757
+                ]
+            },
+            {
+                "exer_id": 652,
+                "score": 0,
+                "knowledge_code": [
+                    652
+                ]
+            },
+            {
+                "exer_id": 504,
+                "score": 0,
+                "knowledge_code": [
+                    504
+                ]
+            },
+            {
+                "exer_id": 493,
+                "score": 0,
+                "knowledge_code": [
+                    493
+                ]
+            },
+            {
+                "exer_id": 495,
+                "score": 1,
+                "knowledge_code": [
+                    495
+                ]
+            },
+            {
+                "exer_id": 197,
+                "score": 0,
+                "knowledge_code": [
+                    197
+                ]
+            },
+            {
+                "exer_id": 359,
+                "score": 1,
+                "knowledge_code": [
+                    359
+                ]
+            },
+            {
+                "exer_id": 347,
+                "score": 0,
+                "knowledge_code": [
+                    347
+                ]
+            },
+            {
+                "exer_id": 37,
+                "score": 0,
+                "knowledge_code": [
+                    37
+                ]
+            },
+            {
+                "exer_id": 443,
+                "score": 0,
+                "knowledge_code": [
+                    443
+                ]
+            },
+            {
+                "exer_id": 505,
+                "score": 0,
+                "knowledge_code": [
+                    505
+                ]
+            },
+            {
+                "exer_id": 175,
+                "score": 0,
+                "knowledge_code": [
+                    175
+                ]
+            }
+        ]
+    },
+]
+
+
+配置文件config.txt为
+# Number of Students, Number of Exercises, Number of Knowledge Concepts
+8576,720,39
+
+
+以下代码是处理上述文件的代码
+import json
+
+
+def build_local_map():
+    data_file = '../data/junyi/log_data.json'
+    with open('config.txt') as i_f:
+        i_f.readline()
+        student_n, exer_n, knowledge_n = list(map(eval, i_f.readline().split(',')))
+
+    temp_list = []
+    with open(data_file, encoding='utf8') as i_f:
+        data = json.load(i_f)
+    k_from_e = ''  # e(src) to k(dst)
+    e_from_k = ''  # k(src) to k(dst)
+    for line in data:
+        for log in line['logs']:
+            exer_id = log['exer_id'] - 1
+            for k in log['knowledge_code']:
+                if (str(exer_id) + '\t' + str(k - 1 + exer_n)) not in temp_list or (
+                        str(k - 1 + exer_n) + '\t' + str(exer_id)) not in temp_list:
+                    k_from_e += str(exer_id) + '\t' + str(k - 1 + exer_n) + '\n'
+                    e_from_k += str(k - 1 + exer_n) + '\t' + str(exer_id) + '\n'
+                    temp_list.append((str(exer_id) + '\t' + str(k - 1 + exer_n)))
+                    temp_list.append((str(k - 1 + exer_n) + '\t' + str(exer_id)))
+    with open('../data/junyi/graph/k_from_e.txt', 'w') as f:
+        f.write(k_from_e)
+    with open('../data/junyi/graph/e_from_k.txt', 'w') as f:
+        f.write(e_from_k)
+
+
+if __name__ == '__main__':
+    build_local_map()
+
+
+现在我有一个数据data.csv数据：
+user_id,item_id,score
+8136,15,1
+1422,167,1
+1227,387,1
+1227,167,1
+6408,208,1
+1227,474,1
+1227,45,0
+7332,613,0
+8136,390,1
+.....
+和q矩阵数据Q_csv.csv
+item_id,knowledge_code
+0,[0]
+1,[0]
+2,[0]
+3,[30]
+4,[8]
+5,[0]
+6,[0]
+7,[11]
+8,[8]
+9,[11]
+10,[14]
+11,[0]
+12,[20]
+13,[12]
+14,[1]
+15,[11]
+.....
+
+请把两个数据作为输入，生成上述代码的功能的代码

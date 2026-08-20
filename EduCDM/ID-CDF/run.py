@@ -1,0 +1,93 @@
+#! python3
+# -*- encoding: utf-8 -*-
+
+from model_parser import parse_args
+import gc
+import json
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import torch
+import torch.nn as nn
+import model
+import train
+import sys
+import os
+
+
+def add_knowledge_code(data: pd.DataFrame, Q_mat):
+    knowledge = []
+    for i in range(data.shape[0]):
+        knowledge.append(Q_mat[data.loc[i, 'item_id']])
+    data['knowledge'] = knowledge
+    return data
+
+
+if __name__ == '__main__':
+    # 设随机种子
+    print(" ========================== buf ==========================")
+    torch.manual_seed(42)
+    # np.random.seed(42)
+    args = parse_args()
+    # args.user_dim = 64
+    # args.item_dim = 64
+    # args.batch_size = 64
+    # args.lr = 7e-4
+    # args.epoch = 10
+    # args.device = 'cuda:0'
+    df_train = pd.read_csv(args.train_file)
+    df_valid = pd.read_csv(args.valid_file)
+    df_test = pd.read_csv(args.test_file)
+    pd.read_csv(args.valid_file)
+    n_user = int(args.n_user)
+    n_item = int(args.n_item)
+    n_know = int(args.n_know)
+
+    Q_mat = np.load(args.Q_matrix) if args.Q_matrix != '' else np.ones((n_item, n_know))
+
+    df_train = add_knowledge_code(df_train, Q_mat)
+    df_valid = add_knowledge_code(df_valid, Q_mat)
+    df_test = add_knowledge_code(df_test, Q_mat)
+
+    # itf_type = args.itf_type
+    user_dim = int(args.user_dim)
+    item_dim = int(args.item_dim)
+    batch_size = int(args.batch_size)
+    lr = float(args.lr)
+    epoch = int(args.epoch)
+    # eta = float(args.eta)
+    device = torch.device(args.device)
+    print(device)
+
+    save_path = args.save_path
+    if not os.path.exists(save_path):
+        os.makedirs(save_path)
+
+    acc_all = []
+    rmse_all = []
+    f1_all = []
+    for i in range(1):
+        net = model.IDCD(n_user, n_item, n_know, user_dim, \
+                         item_dim, Q_mat=Q_mat, \
+                         monotonicity_assumption=True, device=device)
+        result_all = train.train(net, df_train, df_valid, batch_size=batch_size, \
+                                 lr=lr, n_epoch=epoch)
+        np.save(os.path.join(save_path, 'result_all.npy'), result_all)
+        test_result = train.eval(net, df_test, batch_size=args.batch_size)
+        acc_all.append(test_result['acc'])
+        rmse_all.append(test_result['rmse'])
+        f1_all.append(test_result['f1'])
+
+    print('acc = %.3f ± %.3f' % (np.mean(acc_all), np.std(acc_all)))
+    print('rmse = %.3f ± %.3f' % (np.mean(rmse_all), np.std(rmse_all)))
+    print('f1 = %.3f ± %.3f' % (np.mean(f1_all), np.std(f1_all)))
+
+    with open(os.path.join(save_path, 'cmd.txt'), 'w') as fp:
+        fp.write(' '.join(['python'] + sys.argv))
+
+    with open(os.path.join(save_path, 'test_result.json'), 'w') as fp:
+        json.dump(test_result, fp)
+
+    torch.save(net, os.path.join(save_path, 'params_%s_%s.pt' % (user_dim, item_dim)))
+    gc.collect()
+

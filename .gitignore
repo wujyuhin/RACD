@@ -1,0 +1,51 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# --- Virtual environments ---
+.venv/
+venv/
+env/
+ENV/
+
+# --- IDEs / editors ---
+.idea/
+.vscode/
+.cadence/
+*.swp
+
+# --- Model checkpoints & training artifacts ---
+*.pth
+*.pt
+*.ckpt
+*.onnx
+
+# --- Generated results / reports ---
+report/
+**/report/
+result/
+**/result/
+wandb/
+**/wandb/
+*.log
+
+# --- Generated NCDM features & training logs (produced by s1, consumed by s2) ---
+data/**/NCDM_theta*.csv
+data/**/NCDM_psi*.csv
+data/**/NCDM*.pth
+data/**/record.txt
+data/**/*_before.csv
+
+# --- Bundled baseline projects under EduCDM (data/artifacts not required by RACD) ---
+EduCDM/ID-CDF/data/
+EduCDM/ID-CDF/python
+EduCDM/RCD/data/
+EduCDM/RCD/python
+
+# --- OS ---
+.DS_Store
+Thumbs.db
